@@ -1,0 +1,6 @@
+chmod +x install_dependencies.sh
+sudo ./install_dependencies.sh 
+sudo python3 linux_guide.py
+
+
+البحث يكون بالعربي واﻻنكليزي بمجرد كتابة اﻻمر او جزء منه سيظهر اﻻمر كامﻻ مع الشرح ، وبمجرد الضغط على اﻻمر الظاهر سيتم نسخه ، ويمكن لصقه فيما بعد

