@@ -50,12 +50,12 @@ Edit
 python main.py
 On the first run, the script will automatically install any missing libraries.
 
-📷 واجهة البرنامج (Screenshots)
+📷 https://github.com/Ath-coding/Linux_Commands_GUI/blob/main/linux_commands.png
 
 🔗 رابط المشروع
-📂 GitHub Repository
+📂 GitHub: https://github.com/Ath-coding
 
 👨‍💻 المطور (Developer)
 Ath-coding
 
-GitHub: https://github.com/Ath-coding
+
