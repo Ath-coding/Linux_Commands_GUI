@@ -19,16 +19,14 @@
    chmod +x install_dependencies.sh
 شغّل ملف تثبيت المكتبات:
 
-bash
-Copy
-Edit
+
 sudo ./install_dependencies.sh
 شغّل السكربت:
 
-bash
-Copy
-Edit
+
 sudo python3 linux_guide.py
+
+
 🚀 طريقة التشغيل على Windows:
 تأكد من تثبيت Python على جهازك.
 
