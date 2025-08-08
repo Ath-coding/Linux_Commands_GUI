@@ -17,7 +17,9 @@
 2. افتح الطرفية (Terminal أو CMD) وانتقل إلى مجلد السكربت.
 3. شغل السكربت بالأمر:
    ```bash
-   python main.py
+chmod +x install_dependencies.sh
+sudo ./install_dependencies.sh 
+sudo python3 linux_guide.py
 في أول تشغيل، سيقوم السكربت بتنصيب المكتبات الناقصة تلقائياً.
 
 📌 Project Description (English)
