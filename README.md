@@ -26,23 +26,26 @@ It automatically installs all required libraries and comes with a **Tkinter** gr
 
    
 2. Make the dependencies installer executable:
-
-chmod +x install_dependencies.sh
+    ```bash
+   chmod +x install_dependencies.sh
 
 3. Run the dependencies installer:
+    ```bash
    sudo ./install_dependencies.sh
 
-4. Start the script:
+5. Start the script:
+    ```bash
    sudo python3 linux_guide.py
 
-
+#### **On Windows**
 1. Make sure Python is installed.
 
 2. Open CMD or PowerShell and navigate to the project folder:
-
+     ```bash
    cd path\to\project
    
 4. Run the script:
+    ```bash
    python linux_guide.py
 
 
